@@ -34,6 +34,12 @@ export const mobileSlice = createSlice({
         state.checkoutMobile = state.checkoutMobile.concat(addMobile);
       }
     },
+    deleteMobile: (state, action) => {
+      const removeMobileIndex = state.checkoutMobile.findIndex(
+        (mobile) => mobile.id === action.payload.id
+      );
+      state.checkoutMobile.splice(removeMobileIndex, 1);
+    },
   },
   extraReducers: (builder) => {
     builder.addCase(fetchMobile.pending, (state) => {
@@ -53,6 +59,6 @@ export const mobileSlice = createSlice({
   },
 });
 
-export const { setMobile } = mobileSlice.actions;
+export const { setMobile, deleteMobile } = mobileSlice.actions;
 
 export default mobileSlice.reducer;

@@ -11,6 +11,7 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { Outlet } from 'react-router-dom';
+
 import CheckoutIcon from '../../components/checkout-icon/checkout-icon';
 
 const pages = ['Products', 'Pricing', 'Blog'];

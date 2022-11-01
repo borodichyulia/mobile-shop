@@ -7,6 +7,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
+
 import { setMobile } from '../../app/mobileSlice';
 
 const MobilePreview = ({ mobile }) => {

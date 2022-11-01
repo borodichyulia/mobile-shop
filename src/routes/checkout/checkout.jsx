@@ -4,6 +4,7 @@ import List from '@mui/material/List';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { useSelector } from 'react-redux';
+
 import CheckoutItem from '../../components/checkout-item/checkout-item';
 
 const Checkout = () => {

@@ -1,9 +1,11 @@
 import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+
 import MobilePreview from '../../components/mobile-preview/mobile-preview';
 import { fetchMobile } from '../../app/mobileSlice';
-import { Fragment, useEffect } from 'react';
-import './mobiles-preview.css';
 import Checkout from '../../components/checkout-icon/checkout-icon';
+
+import './mobiles-preview.css';
 
 const MobilesPreview = () => {
   const dispatch = useDispatch();
