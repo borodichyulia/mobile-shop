@@ -7,10 +7,14 @@ import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline';
 import Typography from '@mui/material/Typography';
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+
+import { deleteMobile } from '../../app/mobileSlice';
 
 const CheckoutItem = ({ mobile }) => {
   const { name, price, img, amount } = mobile;
 
+  const dispatch = useDispatch();
   const [amountMobile, setAmount] = useState(amount);
 
   const addMobile = () => {
@@ -21,10 +25,14 @@ const CheckoutItem = ({ mobile }) => {
     amountMobile === 1 ? setAmount(1) : setAmount(amountMobile - 1);
   };
 
+  const cleanMobile = () => {
+    dispatch(deleteMobile(mobile));
+  };
+
   return (
     <ListItem
       secondaryAction={
-        <IconButton>
+        <IconButton onClick={() => cleanMobile()}>
           <DeleteIcon />
         </IconButton>
       }
